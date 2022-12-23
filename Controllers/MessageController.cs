@@ -28,9 +28,9 @@ namespace ECommerce.Api.Controllers
             return Ok(_messageService.EditMessage(messageID,messageBody));
         }
         [HttpGet]
-        public IActionResult Get(int FirsUserID,int SeconduserID)
+        public IActionResult Get(string UserName)
         {
-            return Ok(_messageService.GetMessagesBetweenUser(FirsUserID, SeconduserID));
+            return Ok(_messageService.GetMessagesBetweenUser(User.Identity.Name, UserName));
         }
 
         [HttpGet("{MessageID}")]

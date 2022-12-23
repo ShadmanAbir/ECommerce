@@ -29,15 +29,25 @@ namespace ECommerce.Api.Controllers
             return Ok(_sellPostService.UpdateSellPost(sellpostVM));
         }
         [HttpGet]
-        public IActionResult Get()
+        public IActionResult Get(string UserName)
         {
-            return Ok(_sellPostService.GetAllSellPosts());
+            return Ok(_sellPostService.GetAllSellPostsOfUser(UserName));
         }
 
         [HttpGet("{SellPostID}")]
         public IActionResult GetByID(int SellPostID)
         {
             return Ok(_sellPostService.GetSellPostByID(SellPostID));
+        }
+        [HttpGet("SellPostByUserName/{UserName}")]
+        public IActionResult GetByUserName(string Username)
+        {
+            return Ok(_sellPostService.GetAllSellPostsOfUser(Username));
+        }
+        [HttpGet("SellPostByTags")]
+        public IActionResult GetByUserName(List<string> Tags)
+        {
+            return Ok(_sellPostService.GetSellPostsbyTags(Tags));
         }
     }
 }
