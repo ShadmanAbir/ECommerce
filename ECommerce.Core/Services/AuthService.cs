@@ -33,7 +33,7 @@ namespace ECommerce.Core.Services
             var claims = new List<Claim>
                            {
                                new Claim(JwtRegisteredClaimNames.Jti,Guid.NewGuid().ToString()),
-                               new Claim(JwtRegisteredClaimNames.Name, user.UserName),
+                               new Claim(JwtRegisteredClaimNames.NameId, user.UserName),
                                new Claim(JwtRegisteredClaimNames.NameId, user.Id),
                            };
 

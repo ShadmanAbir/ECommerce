@@ -6,7 +6,7 @@ namespace ECommerce.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+    
     public class UserController : ControllerBase
     {
         private readonly IUserService _userService;
@@ -14,17 +14,19 @@ namespace ECommerce.Api.Controllers
         {
             _userService = userService;
         }
+        [Authorize]
         [HttpPost("BlockUser")]
         public IActionResult BlockUser(string userToBlock)
         {
             return Ok(_userService.BlockUser(userToBlock, User.Identity.Name));
         }
-
+        [Authorize]
         [HttpPost("UnblockUser")]
         public IActionResult UnBlockUser(string userToUnblock)
         {
             return Ok(_userService.UnblockUser(userToUnblock, User.Identity.Name));
         }
+        [Authorize]
         [HttpGet("BlockListOfUser")]
         public IActionResult Get()
         {
