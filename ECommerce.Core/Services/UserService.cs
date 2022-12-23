@@ -1,7 +1,9 @@
 ﻿using AutoMapper;
 using ECommerce.Core.Interfaces;
+using ECommerce.Core.ViewModels;
 using ECommerce.Domain.Models;
 using ECommerce.Domain.UnitOfWork;
+using Microsoft.AspNetCore.Identity;
 
 namespace ECommerce.Core.Services
 {
@@ -9,10 +11,12 @@ namespace ECommerce.Core.Services
     {
         private readonly IMapper _mapper;
         private readonly UnitOfWork _unitOfWork;
-        public UserService(IMapper mapper, UnitOfWork unitOfWork)
+        public readonly UserManager<IdentityUser> _userManager;
+        public UserService(IMapper mapper, UnitOfWork unitOfWork, UserManager<IdentityUser> userManager)
         {
             _mapper = mapper;
             _unitOfWork = unitOfWork;
+            _userManager = userManager;
         }
 
         public int BlockUser(string BlockUser, string UserName)
@@ -53,5 +57,10 @@ namespace ECommerce.Core.Services
             return _unitOfWork.Save();
         }
 
+        public List<AspNetUsersViewModel> Users()
+        {
+            var data = _userManager.Users;
+            return _mapper.ProjectTo<AspNetUsersViewModel>(data).ToList();
+        }
     }
 }

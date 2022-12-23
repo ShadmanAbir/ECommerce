@@ -32,5 +32,11 @@ namespace ECommerce.Api.Controllers
         {
             return Ok(_userService.GetBlockListOfUser(User.Identity.Name));
         }
+        
+        [HttpGet("UserList")]
+        public IActionResult GetAllUsers()
+        {
+            return Ok(_userService.Users());
+        }
     }
 }

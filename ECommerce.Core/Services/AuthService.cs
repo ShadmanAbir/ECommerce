@@ -37,7 +37,7 @@ namespace ECommerce.Core.Services
                                new Claim(JwtRegisteredClaimNames.NameId, user.Id),
                            };
 
-            return GetToken(claims, _configuration["SigningKey"]);
+            return GetToken(claims, _configuration["Jwt:Key"]);
         }
 
         public async ValueTask<string> CreateUser(SignUpViewModel signUpVM)

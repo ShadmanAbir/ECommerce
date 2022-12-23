@@ -41,6 +41,7 @@ builder.Services.AddTransient<IAuthService, AuthService>();
 builder.Services.AddTransient<IProductService, ProductService>();
 builder.Services.AddTransient<IMessageService, MessageService>();
 builder.Services.AddTransient<ITagService, TagService>();
+builder.Services.AddTransient<IUserService, UserService>();
 builder.Services.AddTransient<ISellPostService, SellPostService>();
 builder.Services.AddTransient<ISellPostWiseTagService, SellPostWiseTagService>();
 //builder.Services.AddTransient<IBlockListService, BockLis>();
