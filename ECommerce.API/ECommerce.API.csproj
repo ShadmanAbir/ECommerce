@@ -7,6 +7,22 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="obj\Debug\net9.0\.NETCoreApp,Version=v9.0.AssemblyAttributes.cs" />
+    <Compile Include="obj\Debug\net9.0\ECommerce.API.AssemblyInfo.cs" />
+    <Compile Include="obj\Debug\net9.0\ECommerce.API.GlobalUsings.g.cs" />
+    <Compile Include="obj\Debug\net9.0\ECommerce.API.MvcApplicationPartsAssemblyInfo.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="obj\Debug\net9.0\ECommerce.API.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\net9.0\ECommerce.API.sourcelink.json" />
+    <Content Include="obj\Debug\net9.0\rpswa.dswa.cache.json" />
+    <Content Include="obj\Debug\net9.0\staticwebassets.removed.txt" />
+    <Content Include="obj\ECommerce.API.csproj.nuget.dgspec.json" />
+    <Content Include="obj\project.assets.json" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="AutoMapper" Version="15.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.9" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.9" />
@@ -27,10 +43,26 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="bin\Debug\net9.0\" />
     <Folder Include="Controllers\" />
     <Folder Include="Helpers\" />
+    <Folder Include="obj\Debug\net9.0\refint\" />
+    <Folder Include="obj\Debug\net9.0\ref\" />
+    <Folder Include="obj\Debug\net9.0\staticwebassets\" />
     <Folder Include="Services\" />
     <Folder Include="ViewModels\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="obj\Debug\net9.0\ECommerce.API.AssemblyInfoInputs.cache" />
+    <None Include="obj\Debug\net9.0\ECommerce.API.assets.cache" />
+    <None Include="obj\Debug\net9.0\ECommerce.API.csproj.AssemblyReference.cache" />
+    <None Include="obj\Debug\net9.0\ECommerce.API.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\net9.0\ECommerce.API.GeneratedMSBuildEditorConfig.editorconfig" />
+    <None Include="obj\Debug\net9.0\ECommerce.API.MvcApplicationPartsAssemblyInfo.cache" />
+    <None Include="obj\ECommerce.API.csproj.nuget.g.props" />
+    <None Include="obj\ECommerce.API.csproj.nuget.g.targets" />
+    <None Include="obj\project.nuget.cache" />
   </ItemGroup>
 
 </Project>

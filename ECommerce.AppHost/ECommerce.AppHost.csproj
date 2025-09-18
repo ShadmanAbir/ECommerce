@@ -11,6 +11,36 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="obj\Debug\net9.0\.NETCoreApp,Version=v9.0.AssemblyAttributes.cs" />
+    <Compile Include="obj\Debug\net9.0\Aspire\references\ECommerce_API.ProjectMetadata.g.cs" />
+    <Compile Include="obj\Debug\net9.0\Aspire\references\ECommerce_ApiService.ProjectMetadata.g.cs" />
+    <Compile Include="obj\Debug\net9.0\Aspire\references\ECommerce_Web.ProjectMetadata.g.cs" />
+    <Compile Include="obj\Debug\net9.0\Aspire\references\_AppHost.ProjectMetadata.g.cs" />
+    <Compile Include="obj\Debug\net9.0\ECommerce.AppHost.AssemblyInfo.cs" />
+    <Compile Include="obj\Debug\net9.0\ECommerce.AppHost.GlobalUsings.g.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="obj\Debug\net9.0\AppSettingsSchema.json" />
+    <Content Include="obj\Debug\net9.0\CombinedComponentSchema.json" />
+    <Content Include="obj\Debug\net9.0\ECommerce.AppHost.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\net9.0\ECommerce.AppHost.sourcelink.json" />
+    <Content Include="obj\ECommerce.AppHost.csproj.nuget.dgspec.json" />
+    <Content Include="obj\project.assets.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="obj\Debug\net9.0\ECommerce.AppHost.AssemblyInfoInputs.cache" />
+    <None Include="obj\Debug\net9.0\ECommerce.AppHost.assets.cache" />
+    <None Include="obj\Debug\net9.0\ECommerce.AppHost.csproj.AssemblyReference.cache" />
+    <None Include="obj\Debug\net9.0\ECommerce.AppHost.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\net9.0\ECommerce.AppHost.GeneratedMSBuildEditorConfig.editorconfig" />
+    <None Include="obj\ECommerce.AppHost.csproj.nuget.g.props" />
+    <None Include="obj\ECommerce.AppHost.csproj.nuget.g.targets" />
+    <None Include="obj\project.nuget.cache" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\ECommerce.API\ECommerce.API.csproj" />
   </ItemGroup>
 
@@ -18,6 +48,12 @@
     <PackageReference Include="Aspire.Hosting.AppHost" Version="9.4.2" />
     <PackageReference Include="Aspire.Hosting.Redis" Version="9.4.2" />
     <PackageReference Include="KubernetesClient" Version="17.0.14" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="bin\Debug\net9.0\" />
+    <Folder Include="obj\Debug\net9.0\refint\" />
+    <Folder Include="obj\Debug\net9.0\ref\" />
   </ItemGroup>
 
 </Project>
