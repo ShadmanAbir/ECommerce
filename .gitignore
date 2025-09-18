@@ -3,3 +3,4 @@
 ################################################################################
 
 /.vs
+/ECommerce.ApiService/obj/Debug/net9.0/ECommerce.ApiService.AssemblyInfo.cs
