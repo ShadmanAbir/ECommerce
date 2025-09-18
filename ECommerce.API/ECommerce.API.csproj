@@ -37,6 +37,7 @@
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="9.0.0" />
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.4" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="9.0.4" />
   </ItemGroup>
 
   <ItemGroup>
@@ -45,7 +46,6 @@
 
   <ItemGroup>
     <Folder Include="bin\Debug\net9.0\" />
-    <Folder Include="Helpers\" />
     <Folder Include="obj\Debug\net9.0\refint\" />
     <Folder Include="obj\Debug\net9.0\ref\" />
     <Folder Include="obj\Debug\net9.0\staticwebassets\" />
