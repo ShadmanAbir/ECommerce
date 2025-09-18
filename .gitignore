@@ -1,6 +1,46 @@
 ﻿################################################################################
-# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+# Visual Studio / .NET common ignores
 ################################################################################
 
-/.vs
-**/obj/
+# Visual Studio temporary files, build results, and user-specific files
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio Code settings
+.vscode/
+
+# Rider
+.idea/
+
+# NuGet
+*.nupkg
+packages/
+*.snupkg
+
+# ReSharper
+_ReSharper*/
+*.ReSharper*/
+
+# ASP.NET / web
+*.log
+*.vspscc
+*.vssscc
+TestResults/
+*.cache
+*.pdb
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+################################################################################
+# Optional: ignore node modules if using frontend
+################################################################################
+node_modules/
