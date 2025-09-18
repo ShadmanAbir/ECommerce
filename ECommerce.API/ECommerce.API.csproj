@@ -49,7 +49,6 @@
     <Folder Include="obj\Debug\net9.0\refint\" />
     <Folder Include="obj\Debug\net9.0\ref\" />
     <Folder Include="obj\Debug\net9.0\staticwebassets\" />
-    <Folder Include="Services\" />
   </ItemGroup>
 
   <ItemGroup>
