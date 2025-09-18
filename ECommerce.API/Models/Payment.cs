@@ -1,4 +1,4 @@
-﻿namespace ECommerce.ApiService.Models
+﻿namespace ECommerce.API.Models
 {
     public class Payment
     {
