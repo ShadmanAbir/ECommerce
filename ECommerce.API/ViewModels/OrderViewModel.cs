@@ -1,9 +1,11 @@
 ﻿using ECommerce.API.Models;
+using System.ComponentModel.DataAnnotations;
 
 namespace ECommerce.API.ViewModels
 {
     public class OrderViewModel
     {
+        [Key]
         public int OrderId { get; set; }
         public int UserId { get; set; }
         public string Status { get; set; } = "pending"; // pending, paid, shipped, cancelled
@@ -11,7 +13,7 @@ namespace ECommerce.API.ViewModels
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
         // Navigation properties
-        public User? User { get; set; }
+        public UserViewModel? User { get; set; }
         public List<OrderItemViewModel>? Items { get; set; }
     }
 

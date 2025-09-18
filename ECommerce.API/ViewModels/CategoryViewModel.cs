@@ -1,9 +1,11 @@
-﻿using System.Text.Json;
+﻿using System.ComponentModel.DataAnnotations;
+using System.Text.Json;
 
 namespace ECommerce.API.ViewModels
 {
     public class CategoryViewModel
     {
+        [Key]
         public int CategoryId { get; set; }
         public string Name { get; set; } = null!;
         public int? ParentId { get; set; }

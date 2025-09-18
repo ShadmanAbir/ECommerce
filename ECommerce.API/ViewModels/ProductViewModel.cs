@@ -1,10 +1,12 @@
 ﻿using ECommerce.API.Models;
+using System.ComponentModel.DataAnnotations;
 using System.Text.Json;
 
 namespace ECommerce.API.ViewModels
 {
     public class ProductViewModel
     {
+        [Key]
         public int ProductId { get; set; }
         public int CategoryId { get; set; }
         public string Name { get; set; } = null!;

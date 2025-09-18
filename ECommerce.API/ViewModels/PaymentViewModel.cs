@@ -1,9 +1,11 @@
 ﻿using ECommerce.API.Models;
+using System.ComponentModel.DataAnnotations;
 
 namespace ECommerce.API.ViewModels
 {
     public class PaymentViewModel
     {
+        [Key]
         public int PaymentId { get; set; }
         public int OrderId { get; set; }
         public string Method { get; set; } = null!; // card, paypal, cash
