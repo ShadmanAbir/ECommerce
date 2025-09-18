@@ -1,0 +1,6 @@
+{
+  "WhitelistGlobalStylesheetRelativePaths": [
+    "ECommerce.Web\\wwwroot\\app.css"
+  ],
+  "WhitelistGlobalStylesheetDirectoryRelativePaths": []
+}
