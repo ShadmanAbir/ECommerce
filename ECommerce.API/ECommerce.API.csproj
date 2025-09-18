@@ -50,7 +50,6 @@
     <Folder Include="obj\Debug\net9.0\ref\" />
     <Folder Include="obj\Debug\net9.0\staticwebassets\" />
     <Folder Include="Services\" />
-    <Folder Include="ViewModels\" />
   </ItemGroup>
 
   <ItemGroup>
