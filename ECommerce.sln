@@ -8,6 +8,27 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerce.ServiceDefaults",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerce.API", "ECommerce.API\ECommerce.API.csproj", "{F57E33FB-CDB3-6F39-453C-B2F68A5DC768}"
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ECommerce.UI", "ECommerce.UI\", "{FB9E5B66-F6F6-D583-F7A9-F9DD8ACB0BED}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.8.1"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_9359"
+		Debug.AspNetCompiler.PhysicalPath = "ECommerce.UI\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_9359\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_9359"
+		Release.AspNetCompiler.PhysicalPath = "ECommerce.UI\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_9359\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "9359"
+		SlnRelativePath = "ECommerce.UI\"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,6 +47,10 @@ Global
 		{F57E33FB-CDB3-6F39-453C-B2F68A5DC768}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F57E33FB-CDB3-6F39-453C-B2F68A5DC768}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F57E33FB-CDB3-6F39-453C-B2F68A5DC768}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB9E5B66-F6F6-D583-F7A9-F9DD8ACB0BED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB9E5B66-F6F6-D583-F7A9-F9DD8ACB0BED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB9E5B66-F6F6-D583-F7A9-F9DD8ACB0BED}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB9E5B66-F6F6-D583-F7A9-F9DD8ACB0BED}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
