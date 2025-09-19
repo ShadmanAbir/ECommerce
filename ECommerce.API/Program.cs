@@ -1,4 +1,5 @@
 using ECommerce.API.Models;
+using ECommerce.API.Services;
 using ECommerce.ServiceDefaults;
 using Microsoft.EntityFrameworkCore;
 
@@ -14,6 +15,12 @@ builder.Services.AddDbContext<ECommerceContext>(options =>
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 builder.Services.AddSwaggerGen();
+builder.Services.AddScoped<CategoryService>();
+builder.Services.AddScoped<OrderService>();
+builder.Services.AddScoped<ProductService>();
+builder.Services.AddScoped<PaymentService>();
+builder.Services.AddScoped<UserService>();
+
 var app = builder.Build();
 
 app.MapDefaultEndpoints();
