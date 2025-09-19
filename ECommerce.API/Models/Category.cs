@@ -10,6 +10,7 @@ namespace ECommerce.API.Models
 
         // JSON column: array of allowed attributes
         public JsonDocument AllowedAttributes { get; set; } = JsonDocument.Parse("[]");
+        public DateTime CreatedAt { get; set; }
     }
 
     public class CategoryAttribute
