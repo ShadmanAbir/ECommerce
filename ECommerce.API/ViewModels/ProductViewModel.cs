@@ -20,5 +20,6 @@ namespace ECommerce.API.ViewModels
 
         // Navigation property (optional)
         public CategoryViewModel? Category { get; set; }
+        public string CategoryName { get; set; }
     }
 }

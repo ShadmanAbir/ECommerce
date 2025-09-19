@@ -13,7 +13,7 @@ namespace ECommerce.API.Services
         }
 
         // Get category by Id
-        public async Task<Category?> GetCategoryByIdAsync(int id)
+        public async Task<Category?> GetByIdAsync(int id)
         {
             return await _context.Categories
                 .AsNoTracking()
@@ -21,7 +21,7 @@ namespace ECommerce.API.Services
         }
 
         // Add new category
-        public async Task<Category> AddCategoryAsync(string name)
+        public async Task<Category> AddAsync(string name)
         {
             var category = new Category
             {
@@ -36,7 +36,7 @@ namespace ECommerce.API.Services
         }
 
         // Update category
-        public async Task<Category?> UpdateCategoryAsync(int id, string name)
+        public async Task<Category?> UpdateAsync(int id, string name)
         {
             var category = await _context.Categories.FindAsync(id);
             if (category == null)
@@ -54,7 +54,7 @@ namespace ECommerce.API.Services
         }
 
         // Delete category
-        public async Task<bool> DeleteCategoryAsync(int id)
+        public async Task<bool> DeleteAsync(int id)
         {
             var category = await _context.Categories.FindAsync(id);
             if (category == null)
@@ -68,7 +68,7 @@ namespace ECommerce.API.Services
         }
 
         // Optional: Get all categories
-        public async Task<List<Category>> GetAllCategoriesAsync()
+        public async Task<List<Category>> GetCategoriesAsync()
         {
             return await _context.Categories
                 .AsNoTracking()

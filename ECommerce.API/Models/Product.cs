@@ -17,5 +17,10 @@ namespace ECommerce.API.Models
 
         // Navigation property (optional)
         public Category? Category { get; set; }
+
+        public static implicit operator Product(Product v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

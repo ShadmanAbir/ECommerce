@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using ECommerce.API.Models;
+using ECommerce.API.Services;
 
 namespace ECommerce.API.Controllers
 {
@@ -13,95 +10,63 @@ namespace ECommerce.API.Controllers
     [ApiController]
     public class OrdersController : ControllerBase
     {
-        private readonly ECommerceContext _context;
+        private readonly OrderService _orderService;
 
-        public OrdersController(ECommerceContext context)
+        public OrdersController(OrderService orderService)
         {
-            _context = context;
+            _orderService = orderService;
         }
 
         // GET: api/Orders
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Order>>> GetOrders()
         {
-            return await _context.Orders.ToListAsync();
+            var orders = await _orderService.GetAllAsync();
+            return Ok(orders);
         }
 
         // GET: api/Orders/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Order>> GetOrder(int id)
         {
-            var order = await _context.Orders.FindAsync(id);
-
+            var order = await _orderService.GetByIdAsync(id);
             if (order == null)
-            {
                 return NotFound();
-            }
 
-            return order;
+            return Ok(order);
         }
 
         // PUT: api/Orders/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutOrder(int id, Order order)
         {
             if (id != order.OrderId)
-            {
                 return BadRequest();
-            }
 
-            _context.Entry(order).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!OrderExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+            var updated = await _orderService.UpdateAsync(order);
+            if (!updated)
+                return NotFound();
 
             return NoContent();
         }
 
         // POST: api/Orders
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<Order>> PostOrder(Order order)
         {
-            _context.Orders.Add(order);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction("GetOrder", new { id = order.OrderId }, order);
+            var createdOrder = await _orderService.CreateAsync(order);
+            return CreatedAtAction(nameof(GetOrder), new { id = createdOrder.OrderId }, createdOrder);
         }
 
         // DELETE: api/Orders/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteOrder(int id)
         {
-            var order = await _context.Orders.FindAsync(id);
-            if (order == null)
-            {
+            var deleted = await _orderService.DeleteAsync(id);
+            if (!deleted)
                 return NotFound();
-            }
-
-            _context.Orders.Remove(order);
-            await _context.SaveChangesAsync();
 
             return NoContent();
-        }
-
-        private bool OrderExists(int id)
-        {
-            return _context.Orders.Any(e => e.OrderId == id);
         }
     }
 }

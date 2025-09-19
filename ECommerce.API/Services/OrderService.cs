@@ -13,7 +13,7 @@ namespace ECommerce.API.Services
         }
 
         // Create new order
-        public async Task<Order> CreateOrderAsync(Order order)
+        public async Task<Order> CreateAsync(Order order)
         {
             order.CreatedAt = DateTime.UtcNow;
             _context.Orders.Add(order);
@@ -43,7 +43,7 @@ namespace ECommerce.API.Services
         }
 
         // Update order status
-        public async Task<Order?> UpdateOrderStatusAsync(int id, string status)
+        public async Task<Order?> UpdateAsync(int id, string status)
         {
             var order = await _context.Orders.FindAsync(id);
             if (order == null) return null;
@@ -58,7 +58,7 @@ namespace ECommerce.API.Services
         }
 
         // Delete (cancel) order
-        public async Task<bool> DeleteOrderAsync(int id)
+        public async Task<bool> DeleteAsync(int id)
         {
             var order = await _context.Orders.FindAsync(id);
             if (order == null) return false;
